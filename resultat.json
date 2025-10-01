@@ -74,7 +74,7 @@
     },
     {
       "question_id": 4,
-      "question": "Que renvoie l’expression len([1, 2, 3]) ?",
+      "question": "Que renvoie l'expression len([1, 2, 3]) ?",
       "correct": false,
       "liste_choix": [
         {
@@ -114,6 +114,1041 @@
         },
         {
           "choix": "Un tuple est toujours trié automatiquement.",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 6,
+      "question": "Comment créer une variable nommée 'age' avec la valeur 25 ?",
+      "correct": true,
+      "liste_choix": [
+        {
+          "choix": "age = 25",
+          "correct": true
+        },
+        {
+          "choix": "int age = 25",
+          "correct": false
+        },
+        {
+          "choix": "var age = 25",
+          "correct": false
+        },
+        {
+          "choix": "age := 25",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 7,
+      "question": "Quel est le résultat de 10 // 3 en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "3",
+          "correct": true
+        },
+        {
+          "choix": "3.33",
+          "correct": false
+        },
+        {
+          "choix": "4",
+          "correct": false
+        },
+        {
+          "choix": "1",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 8,
+      "question": "Quel est le résultat de 10 % 3 en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "1",
+          "correct": true
+        },
+        {
+          "choix": "3",
+          "correct": false
+        },
+        {
+          "choix": "0",
+          "correct": false
+        },
+        {
+          "choix": "3.33",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 9,
+      "question": "Comment écrire un commentaire sur une seule ligne en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "# Ceci est un commentaire",
+          "correct": true
+        },
+        {
+          "choix": "// Ceci est un commentaire",
+          "correct": false
+        },
+        {
+          "choix": "/* Ceci est un commentaire */",
+          "correct": false
+        },
+        {
+          "choix": "<!-- Ceci est un commentaire -->",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 10,
+      "question": "Quelle fonction permet de convertir une chaîne en entier ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "int()",
+          "correct": true
+        },
+        {
+          "choix": "str()",
+          "correct": false
+        },
+        {
+          "choix": "float()",
+          "correct": false
+        },
+        {
+          "choix": "convert()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 11,
+      "question": "Quelle est la syntaxe correcte d'une boucle for qui parcourt les nombres de 0 à 4 ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "for i in range(5):",
+          "correct": true
+        },
+        {
+          "choix": "for (i = 0; i < 5; i++):",
+          "correct": false
+        },
+        {
+          "choix": "for i to 5:",
+          "correct": false
+        },
+        {
+          "choix": "foreach i in 5:",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 12,
+      "question": "Comment accéder au premier élément d'une liste 'ma_liste' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "ma_liste[0]",
+          "correct": true
+        },
+        {
+          "choix": "ma_liste[1]",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste.first()",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste(0)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 13,
+      "question": "Quelle méthode permet d'ajouter un élément à la fin d'une liste ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "append()",
+          "correct": true
+        },
+        {
+          "choix": "add()",
+          "correct": false
+        },
+        {
+          "choix": "push()",
+          "correct": false
+        },
+        {
+          "choix": "insert()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 14,
+      "question": "Comment créer un dictionnaire vide en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "{}",
+          "correct": true
+        },
+        {
+          "choix": "[]",
+          "correct": false
+        },
+        {
+          "choix": "dict[]",
+          "correct": false
+        },
+        {
+          "choix": "()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 15,
+      "question": "Quelle est la valeur de x après : x = 5; x += 3 ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "8",
+          "correct": true
+        },
+        {
+          "choix": "5",
+          "correct": false
+        },
+        {
+          "choix": "3",
+          "correct": false
+        },
+        {
+          "choix": "15",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 16,
+      "question": "Quel mot-clé permet de définir une condition en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "if",
+          "correct": true
+        },
+        {
+          "choix": "when",
+          "correct": false
+        },
+        {
+          "choix": "condition",
+          "correct": false
+        },
+        {
+          "choix": "switch",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 17,
+      "question": "Comment vérifier si deux valeurs sont égales en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "==",
+          "correct": true
+        },
+        {
+          "choix": "=",
+          "correct": false
+        },
+        {
+          "choix": "equals()",
+          "correct": false
+        },
+        {
+          "choix": "is",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 18,
+      "question": "Quel est le type de données de True en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "bool",
+          "correct": true
+        },
+        {
+          "choix": "int",
+          "correct": false
+        },
+        {
+          "choix": "str",
+          "correct": false
+        },
+        {
+          "choix": "boolean",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 19,
+      "question": "Comment créer une chaîne de caractères sur plusieurs lignes ?",
+      "correct": true,
+      "liste_choix": [
+        {
+          "choix": "\"\"\"texte sur\nplusieurs lignes\"\"\"",
+          "correct": true
+        },
+        {
+          "choix": "'texte sur\nplusieurs lignes'",
+          "correct": false
+        },
+        {
+          "choix": "\"texte sur plusieurs lignes\"",
+          "correct": false
+        },
+        {
+          "choix": "multiline(\"texte\")",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 20,
+      "question": "Quelle fonction permet de connaître le type d'une variable ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "type()",
+          "correct": true
+        },
+        {
+          "choix": "typeof()",
+          "correct": false
+        },
+        {
+          "choix": "gettype()",
+          "correct": false
+        },
+        {
+          "choix": "vartype()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 21,
+      "question": "Comment créer une liste contenant les nombres 1, 2 et 3 ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "[1, 2, 3]",
+          "correct": true
+        },
+        {
+          "choix": "{1, 2, 3}",
+          "correct": false
+        },
+        {
+          "choix": "(1, 2, 3)",
+          "correct": false
+        },
+        {
+          "choix": "list(1, 2, 3)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 22,
+      "question": "Quelle est la différence entre '=' et '==' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "'=' est une affectation, '==' est une comparaison",
+          "correct": true
+        },
+        {
+          "choix": "'=' est une comparaison, '==' est une affectation",
+          "correct": false
+        },
+        {
+          "choix": "Aucune différence",
+          "correct": false
+        },
+        {
+          "choix": "'==' est utilisé pour les nombres uniquement",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 23,
+      "question": "Comment accéder au dernier élément d'une liste 'ma_liste' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "ma_liste[-1]",
+          "correct": true
+        },
+        {
+          "choix": "ma_liste[last]",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste.last()",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste[len(ma_liste)]",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 24,
+      "question": "Quelle boucle s'exécute tant qu'une condition est vraie ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "while",
+          "correct": true
+        },
+        {
+          "choix": "for",
+          "correct": false
+        },
+        {
+          "choix": "do",
+          "correct": false
+        },
+        {
+          "choix": "repeat",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 25,
+      "question": "Comment créer un tuple contenant les valeurs 1, 2, 3 ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "(1, 2, 3)",
+          "correct": true
+        },
+        {
+          "choix": "[1, 2, 3]",
+          "correct": false
+        },
+        {
+          "choix": "{1, 2, 3}",
+          "correct": false
+        },
+        {
+          "choix": "tuple[1, 2, 3]",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 26,
+      "question": "Quel mot-clé permet de sortir d'une boucle prématurément ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "break",
+          "correct": true
+        },
+        {
+          "choix": "exit",
+          "correct": false
+        },
+        {
+          "choix": "stop",
+          "correct": false
+        },
+        {
+          "choix": "return",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 27,
+      "question": "Quel mot-clé permet de passer à l'itération suivante d'une boucle ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "continue",
+          "correct": true
+        },
+        {
+          "choix": "skip",
+          "correct": false
+        },
+        {
+          "choix": "next",
+          "correct": false
+        },
+        {
+          "choix": "pass",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 28,
+      "question": "Comment accéder à la valeur associée à la clé 'nom' dans un dictionnaire 'd' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "d['nom']",
+          "correct": true
+        },
+        {
+          "choix": "d.nom",
+          "correct": false
+        },
+        {
+          "choix": "d->nom",
+          "correct": false
+        },
+        {
+          "choix": "d(nom)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 29,
+      "question": "Quelle méthode permet de supprimer le dernier élément d'une liste ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "pop()",
+          "correct": true
+        },
+        {
+          "choix": "remove()",
+          "correct": false
+        },
+        {
+          "choix": "delete()",
+          "correct": false
+        },
+        {
+          "choix": "drop()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 30,
+      "question": "Comment concaténer deux chaînes 'Hello' et 'World' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "'Hello' + ' ' + 'World'",
+          "correct": true
+        },
+        {
+          "choix": "'Hello'.concat('World')",
+          "correct": false
+        },
+        {
+          "choix": "concat('Hello', 'World')",
+          "correct": false
+        },
+        {
+          "choix": "'Hello' & 'World'",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 31,
+      "question": "Que renvoie range(5) ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "Une séquence de 0 à 4",
+          "correct": true
+        },
+        {
+          "choix": "Une liste [1, 2, 3, 4, 5]",
+          "correct": false
+        },
+        {
+          "choix": "Une séquence de 1 à 5",
+          "correct": false
+        },
+        {
+          "choix": "Le nombre 5",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 32,
+      "question": "Quelle est la syntaxe correcte pour une instruction else ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "else:",
+          "correct": true
+        },
+        {
+          "choix": "else",
+          "correct": false
+        },
+        {
+          "choix": "else()",
+          "correct": false
+        },
+        {
+          "choix": "elif:",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 33,
+      "question": "Comment vérifier si un élément 'x' est dans une liste 'ma_liste' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "x in ma_liste",
+          "correct": true
+        },
+        {
+          "choix": "ma_liste.contains(x)",
+          "correct": false
+        },
+        {
+          "choix": "x.in(ma_liste)",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste.has(x)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 34,
+      "question": "Quelle fonction permet de convertir une valeur en chaîne de caractères ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "str()",
+          "correct": true
+        },
+        {
+          "choix": "string()",
+          "correct": false
+        },
+        {
+          "choix": "toStr()",
+          "correct": false
+        },
+        {
+          "choix": "char()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 35,
+      "question": "Quel est le résultat de 2 ** 3 en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "8",
+          "correct": true
+        },
+        {
+          "choix": "6",
+          "correct": false
+        },
+        {
+          "choix": "9",
+          "correct": false
+        },
+        {
+          "choix": "5",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 36,
+      "question": "Comment créer une fonction sans paramètre nommée 'bonjour' ?",
+      "correct": true,
+      "liste_choix": [
+        {
+          "choix": "def bonjour():",
+          "correct": true
+        },
+        {
+          "choix": "function bonjour():",
+          "correct": false
+        },
+        {
+          "choix": "def bonjour:",
+          "correct": false
+        },
+        {
+          "choix": "create bonjour():",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 37,
+      "question": "Quelle méthode transforme une chaîne en minuscules ?",
+      "correct": true,
+      "liste_choix": [
+        {
+          "choix": "lower()",
+          "correct": true
+        },
+        {
+          "choix": "toLower()",
+          "correct": false
+        },
+        {
+          "choix": "lowercase()",
+          "correct": false
+        },
+        {
+          "choix": "min()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 38,
+      "question": "Quelle méthode transforme une chaîne en majuscules ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "upper()",
+          "correct": true
+        },
+        {
+          "choix": "toUpper()",
+          "correct": false
+        },
+        {
+          "choix": "uppercase()",
+          "correct": false
+        },
+        {
+          "choix": "max()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 39,
+      "question": "Comment obtenir la longueur d'une chaîne 's' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "len(s)",
+          "correct": true
+        },
+        {
+          "choix": "s.length",
+          "correct": false
+        },
+        {
+          "choix": "s.len()",
+          "correct": false
+        },
+        {
+          "choix": "length(s)",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 40,
+      "question": "Quel symbole est utilisé pour l'indentation standard en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "4 espaces",
+          "correct": true
+        },
+        {
+          "choix": "Une tabulation",
+          "correct": false
+        },
+        {
+          "choix": "2 espaces",
+          "correct": false
+        },
+        {
+          "choix": "Les accolades {}",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 41,
+      "question": "Que renvoie bool('') (chaîne vide) ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "False",
+          "correct": true
+        },
+        {
+          "choix": "True",
+          "correct": false
+        },
+        {
+          "choix": "None",
+          "correct": false
+        },
+        {
+          "choix": "0",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 42,
+      "question": "Comment écrire une condition 'si x est différent de 5' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "if x != 5:",
+          "correct": true
+        },
+        {
+          "choix": "if x <> 5:",
+          "correct": false
+        },
+        {
+          "choix": "if x not 5:",
+          "correct": false
+        },
+        {
+          "choix": "if x !== 5:",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 43,
+      "question": "Quelle méthode divise une chaîne en une liste de sous-chaînes ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "split()",
+          "correct": true
+        },
+        {
+          "choix": "divide()",
+          "correct": false
+        },
+        {
+          "choix": "separate()",
+          "correct": false
+        },
+        {
+          "choix": "cut()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 44,
+      "question": "Comment créer un ensemble (set) vide en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "set()",
+          "correct": true
+        },
+        {
+          "choix": "{}",
+          "correct": false
+        },
+        {
+          "choix": "[]",
+          "correct": false
+        },
+        {
+          "choix": "set[]",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 45,
+      "question": "Quelle fonction retourne le plus grand élément d'une liste ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "max()",
+          "correct": true
+        },
+        {
+          "choix": "largest()",
+          "correct": false
+        },
+        {
+          "choix": "biggest()",
+          "correct": false
+        },
+        {
+          "choix": "top()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 46,
+      "question": "Quelle fonction retourne le plus petit élément d'une liste ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "min()",
+          "correct": true
+        },
+        {
+          "choix": "smallest()",
+          "correct": false
+        },
+        {
+          "choix": "lowest()",
+          "correct": false
+        },
+        {
+          "choix": "bottom()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 47,
+      "question": "Comment inverser l'ordre des éléments d'une liste 'ma_liste' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "ma_liste.reverse()",
+          "correct": true
+        },
+        {
+          "choix": "reverse(ma_liste)",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste.flip()",
+          "correct": false
+        },
+        {
+          "choix": "ma_liste.invert()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 48,
+      "question": "Quelle méthode trie une liste sur place ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "sort()",
+          "correct": true
+        },
+        {
+          "choix": "order()",
+          "correct": false
+        },
+        {
+          "choix": "arrange()",
+          "correct": false
+        },
+        {
+          "choix": "organize()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 49,
+      "question": "Comment obtenir les clés d'un dictionnaire 'd' ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "d.keys()",
+          "correct": true
+        },
+        {
+          "choix": "d.getKeys()",
+          "correct": false
+        },
+        {
+          "choix": "keys(d)",
+          "correct": false
+        },
+        {
+          "choix": "d.keyList()",
+          "correct": false
+        }
+      ]
+    },
+    {
+      "question_id": 50,
+      "question": "Que fait l'instruction 'pass' en Python ?",
+      "correct": false,
+      "liste_choix": [
+        {
+          "choix": "Ne fait rien, c'est une instruction vide",
+          "correct": true
+        },
+        {
+          "choix": "Passe à la ligne suivante",
+          "correct": false
+        },
+        {
+          "choix": "Termine la fonction",
+          "correct": false
+        },
+        {
+          "choix": "Saute une itération",
           "correct": false
         }
       ]
