@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 Quiz Python - Application interactive de quiz
-Convertie depuis quiz.ipynb
 """
 
 import json
 import random
 import argparse
+import os
 from typing import Dict, List
 
 
@@ -45,14 +45,18 @@ def build_quiz_structure(data: Dict) -> Dict:
     return quiz
 
 
-def get_valid_input(prompt: str, min_val: int, max_val: int) -> int:
-    """Obtient une entrée valide de l'utilisateur entre min_val et max_val."""
+def get_valid_input(prompt: str, min_val: int, max_val: int) -> int | None:
+    """Obtient une entrée valide de l'utilisateur entre min_val et max_val.
+
+    Retourne None si l'utilisateur appuie sur Entrée sans saisir de valeur (pour passer la question).
+    """
     while True:
         try:
             user_input = input(prompt).strip()
+
+            # Si l'utilisateur appuie sur Entrée sans rien saisir, passer la question
             if not user_input:
-                print(f"⚠️  Veuillez entrer un nombre entre {min_val} et {max_val}")
-                continue
+                return None
 
             value = int(user_input)
             if min_val <= value <= max_val:
@@ -86,15 +90,22 @@ def run_questionnaire(quiz: Dict) -> None:
         for numero, choix in enumerate(choix_propose):
             print(f'\t{numero + 1} - {choix["choix"]}')
 
-        reponse = get_valid_input("\nRenseignez votre choix : ", 1, len(choix_propose)) - 1
+        reponse = get_valid_input("\nRenseignez votre choix (Entrée pour passer) : ", 1, len(choix_propose))
+
+        # Si l'utilisateur a appuyé sur Entrée sans réponse, passer à la question suivante
+        if reponse is None:
+            os.system('clear' if os.name != 'nt' else 'cls')
+            continue
+
+        reponse -= 1  # Convertir en index (1-based to 0-based)
 
         if choix_propose[reponse]["correct"]:
-            print("✅ Correct!\n")
             for question in quiz["questions"]:
                 if question_pose["question_id"] == question["question_id"]:
                     question["correct"] = True
-        else:
-            print("❌ Incorrect!\n")
+
+        # Effacer l'écran avant la question suivante
+        os.system('clear' if os.name != 'nt' else 'cls')
 
 
 def save_results(quiz: Dict, filename: str) -> None:
@@ -110,7 +121,7 @@ def save_results(quiz: Dict, filename: str) -> None:
     print(f"  Résultats")
     print(f"{'='*60}")
     print(f"Score: {correct_count}/{total_count}")
-    print(f"✅ Les résultats ont été sauvegardés dans '{filename}'")
+    print(f"✅ Les résultats ont été sauvegardés")
 
 
 def main():
@@ -120,42 +131,64 @@ def main():
     )
     parser.add_argument(
         '-q', '--quiz',
-        default='quiz_python.json',
-        help='Chemin vers le fichier JSON du quiz (défaut: quiz_python.json)'
+        default='quiz_python',
+        help='Nom du fichier de quiz sans extension (défaut: quiz_python)'
     )
     parser.add_argument(
         '-o', '--output',
-        default='resultat.json',
-        help='Chemin vers le fichier de résultats (défaut: resultat.json)'
+        default='resultat',
+        help='Nom du fichier de résultats sans extension (défaut: resultat)'
+    )
+    parser.add_argument(
+        '-r', '--resume',
+        action='store_true',
+        help='Reprendre un quiz sur les questions incorrectes du fichier de résultats'
     )
 
     args = parser.parse_args()
 
+    # Construire les chemins complets avec les dossiers et extensions
+    quiz_path = os.path.join('quiz_data', 'quiz', f'{args.quiz}.json')
+    output_path = os.path.join('quiz_data', 'resultats', f'{args.output}.json')
+
     try:
-        # Charger le quiz
-        data = load_quiz(args.quiz)
+        if args.resume:
+            # Mode reprise: charger le fichier de résultats existant
+            if not os.path.exists(output_path):
+                print(f"❌ Erreur: Le fichier de résultats '{output_path}' n'existe pas.")
+                return 1
 
-        # Construire la structure
-        quiz = build_quiz_structure(data)
+            quiz = load_quiz(output_path)
+            print("\n" + "="*60)
+            print("  Reprise du Quiz")
+            print("="*60 + "\n")
+            print(f"Quiz: {quiz['quiz_title']}")
+            print(f"Utilisateur: {quiz['prenom']} {quiz['nom']}\n")
+        else:
+            # Mode normal: charger le quiz depuis le fichier source
+            data = load_quiz(quiz_path)
 
-        # Demander nom et prénom
-        print("\n" + "="*60)
-        print("  Bienvenue au Quiz Python!")
-        print("="*60 + "\n")
-        quiz['nom'] = input("Entrez votre nom : ").strip()
-        quiz['prenom'] = input("Entrez votre prénom : ").strip()
+            # Construire la structure
+            quiz = build_quiz_structure(data)
+
+            # Demander nom et prénom
+            print("\n" + "="*60)
+            print("  Bienvenue au Quiz Python!")
+            print("="*60 + "\n")
+            quiz['nom'] = input("Entrez votre nom : ").strip()
+            quiz['prenom'] = input("Entrez votre prénom : ").strip()
 
         # Lancer le questionnaire
         run_questionnaire(quiz)
 
         # Sauvegarder les résultats
-        save_results(quiz, args.output)
+        save_results(quiz, output_path)
 
     except FileNotFoundError:
-        print(f"❌ Erreur: Le fichier '{args.quiz}' n'a pas été trouvé.")
+        print(f"❌ Erreur: Le fichier '{quiz_path}' n'a pas été trouvé.")
         return 1
     except json.JSONDecodeError:
-        print(f"❌ Erreur: Le fichier '{args.quiz}' n'est pas un JSON valide.")
+        print(f"❌ Erreur: Le fichier '{quiz_path}' n'est pas un JSON valide.")
         return 1
     except KeyboardInterrupt:
         print("\n\n⚠️  Quiz interrompu par l'utilisateur.")
