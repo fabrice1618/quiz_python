@@ -1,0 +1,8 @@
+#!/bin/bash
+# Script de lancement du quiz Python
+
+# Obtenir le répertoire du script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Lancer le script Python avec tous les arguments passés
+python3 "$SCRIPT_DIR/.quiz/quiz.py" "$@"

@@ -1,0 +1,61 @@
+{
+  "quiz_title": "Quiz - Connaissances de base en informatique",
+  "language": "fr",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Que signifie l'acronyme CPU ?",
+      "choices": [
+        "Central Processing Unit",
+        "Computer Personal Unit",
+        "Central Program Utility",
+        "Computer Processing Utility"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 2,
+      "question": "Quelle unité mesure la capacité de stockage d'un disque dur ?",
+      "choices": [
+        "Go (Gigaoctet)",
+        "GHz (Gigahertz)",
+        "Mb (Mégabit)",
+        "Watt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 3,
+      "question": "Quel type de fichier est généralement associé à une image ?",
+      "choices": [
+        ".jpg",
+        ".txt",
+        ".exe",
+        ".mp3"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 4,
+      "question": "Quelle est la fonction principale de la RAM dans un ordinateur ?",
+      "choices": [
+        "Stocker temporairement les données en cours d'utilisation",
+        "Stocker de façon permanente le système d'exploitation",
+        "Refroidir le processeur",
+        "Connecter l'ordinateur à Internet"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 5,
+      "question": "Que signifie l'extension de fichier .pdf ?",
+      "choices": [
+        "Portable Document Format",
+        "Personal Data File",
+        "Program Download File",
+        "Picture Document Format"
+      ],
+      "answer_index": 0
+    }
+  ]
+}

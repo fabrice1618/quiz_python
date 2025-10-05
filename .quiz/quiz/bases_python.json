@@ -1,0 +1,1106 @@
+{
+  "quiz_title": "Quiz - Bases de Python",
+  "language": "fr",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quelle instruction affiche le texte Hello World en Python ?",
+      "choices": [
+        "print(\"Hello World\")",
+        "echo \"Hello World\"",
+        "console.log(\"Hello World\")",
+        "printf(\"Hello World\")"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 2,
+      "question": "En Python 3, quel est le type de retour de la fonction input() ?",
+      "choices": [
+        "str",
+        "int",
+        "bool",
+        "NoneType"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 3,
+      "question": "Quelle est la bonne syntaxe pour définir une fonction add qui renvoie la somme de x et y ?",
+      "choices": [
+        "def add(x, y):\n    return x + y",
+        "function add(x, y) {\n  return x + y;\n}",
+        "def add x, y:\n    return x + y",
+        "def add(x, y) -> x + y"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 4,
+      "question": "Que renvoie l'expression len([1, 2, 3]) ?",
+      "choices": [
+        "3",
+        "\"3\"",
+        "2",
+        "Une erreur de type"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 5,
+      "question": "Quelle affirmation est correcte à propos des listes et des tuples en Python ?",
+      "choices": [
+        "Une liste est mutable, un tuple est immuable.",
+        "Les listes et les tuples sont immuables.",
+        "Les listes et les tuples sont mutables.",
+        "Un tuple est toujours trié automatiquement."
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 6,
+      "question": "Quel est le type de la valeur 3.14 en Python ?",
+      "choices": [
+        "float",
+        "int",
+        "str",
+        "double"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 7,
+      "question": "Comment créer un commentaire sur une seule ligne en Python ?",
+      "choices": [
+        "# Ceci est un commentaire",
+        "// Ceci est un commentaire",
+        "/* Ceci est un commentaire */",
+        "<!-- Ceci est un commentaire -->"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 8,
+      "question": "Quelle est la syntaxe correcte pour une condition if en Python ?",
+      "choices": [
+        "if x > 5:",
+        "if (x > 5) {",
+        "if x > 5 then:",
+        "if x > 5"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 9,
+      "question": "Comment convertir la chaîne '42' en entier ?",
+      "choices": [
+        "int('42')",
+        "Integer.parseInt('42')",
+        "toInt('42')",
+        "convert('42', int)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 10,
+      "question": "Que renvoie l'expression '3' + '4' en Python ?",
+      "choices": [
+        "'34'",
+        "7",
+        "'7'",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 11,
+      "question": "Quelle méthode permet d'ajouter un élément à la fin d'une liste ?",
+      "choices": [
+        "append()",
+        "add()",
+        "push()",
+        "insert()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 12,
+      "question": "Comment accéder au premier élément d'une liste ma_liste ?",
+      "choices": [
+        "ma_liste[0]",
+        "ma_liste[1]",
+        "ma_liste.first()",
+        "ma_liste{0}"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 13,
+      "question": "Quelle est la syntaxe d'une boucle for qui parcourt les nombres de 0 à 4 ?",
+      "choices": [
+        "for i in range(5):",
+        "for i = 0 to 4:",
+        "for (i=0; i<5; i++):",
+        "for i in [0,1,2,3,4]:"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 14,
+      "question": "Comment vérifier si une clé 'nom' existe dans un dictionnaire personne ?",
+      "choices": [
+        "'nom' in personne",
+        "personne.hasKey('nom')",
+        "personne.contains('nom')",
+        "exists(personne, 'nom')"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 15,
+      "question": "Quelle est la différence entre '==' et '=' en Python ?",
+      "choices": [
+        "'==' compare deux valeurs, '=' assigne une valeur",
+        "'=' compare deux valeurs, '==' assigne une valeur",
+        "Aucune différence",
+        "'==' est pour les nombres, '=' pour les chaînes"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 16,
+      "question": "Que renvoie bool(0) en Python ?",
+      "choices": [
+        "False",
+        "True",
+        "0",
+        "None"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 17,
+      "question": "Comment créer une liste vide en Python ?",
+      "choices": [
+        "[] ou list()",
+        "Seulement []",
+        "Seulement list()",
+        "new List()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 18,
+      "question": "Quelle méthode permet de supprimer un élément d'une liste par son index ?",
+      "choices": [
+        "pop()",
+        "delete()",
+        "remove()",
+        "erase()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 19,
+      "question": "Comment parcourir à la fois les indices et les valeurs d'une liste ?",
+      "choices": [
+        "for i, val in enumerate(ma_liste):",
+        "for i, val in ma_liste:",
+        "for (i, val) in range(ma_liste):",
+        "for i in ma_liste with index:"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 20,
+      "question": "Que signifie l'opérateur // en Python ?",
+      "choices": [
+        "Division entière",
+        "Commentaire",
+        "Division flottante",
+        "Modulo"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 21,
+      "question": "Comment créer un dictionnaire vide ?",
+      "choices": [
+        "{} ou dict()",
+        "Seulement {}",
+        "Seulement dict()",
+        "[]"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 22,
+      "question": "Quelle est la syntaxe correcte pour une boucle while ?",
+      "choices": [
+        "while x < 10:",
+        "while (x < 10) {",
+        "while x < 10 do:",
+        "loop while x < 10:"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 23,
+      "question": "Comment obtenir la longueur d'une chaîne de caractères texte ?",
+      "choices": [
+        "len(texte)",
+        "texte.length()",
+        "length(texte)",
+        "texte.size()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 24,
+      "question": "Que renvoie type([1, 2, 3]) ?",
+      "choices": [
+        "<class 'list'>",
+        "list",
+        "array",
+        "<class 'array'>"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 25,
+      "question": "Comment mettre une chaîne en majuscules ?",
+      "choices": [
+        "texte.upper()",
+        "texte.toUpperCase()",
+        "upper(texte)",
+        "texte.capitalize()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 26,
+      "question": "Quelle est la valeur de 2 ** 3 en Python ?",
+      "choices": [
+        "8",
+        "6",
+        "9",
+        "23"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 27,
+      "question": "Comment accéder au dernier élément d'une liste ma_liste ?",
+      "choices": [
+        "ma_liste[-1]",
+        "ma_liste[len(ma_liste)]",
+        "ma_liste.last()",
+        "ma_liste[end]"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 28,
+      "question": "Que fait la méthode split() sur une chaîne ?",
+      "choices": [
+        "Découpe la chaîne en une liste",
+        "Divise un nombre en deux",
+        "Supprime des espaces",
+        "Inverse la chaîne"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 29,
+      "question": "Comment vérifier si un élément est dans une liste ?",
+      "choices": [
+        "element in ma_liste",
+        "ma_liste.contains(element)",
+        "has(ma_liste, element)",
+        "ma_liste.has(element)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 30,
+      "question": "Quelle est la syntaxe pour importer le module math ?",
+      "choices": [
+        "import math",
+        "include math",
+        "using math",
+        "require math"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 31,
+      "question": "Comment définir une fonction sans paramètres nommée bonjour ?",
+      "choices": [
+        "def bonjour():",
+        "function bonjour():",
+        "def bonjour:",
+        "bonjour() def:"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 32,
+      "question": "Que renvoie range(3) ?",
+      "choices": [
+        "Un objet range représentant 0, 1, 2",
+        "[0, 1, 2]",
+        "[1, 2, 3]",
+        "3"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 33,
+      "question": "Comment sortir d'une boucle prématurément ?",
+      "choices": [
+        "break",
+        "exit",
+        "stop",
+        "return"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 34,
+      "question": "Que fait l'instruction continue dans une boucle ?",
+      "choices": [
+        "Passe à l'itération suivante",
+        "Sort de la boucle",
+        "Redémarre la boucle depuis le début",
+        "Arrête le programme"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 35,
+      "question": "Comment créer une liste contenant les nombres de 1 à 5 ?",
+      "choices": [
+        "[1, 2, 3, 4, 5] ou list(range(1, 6))",
+        "Seulement [1, 2, 3, 4, 5]",
+        "range(1, 5)",
+        "new int[5]"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 36,
+      "question": "Quelle méthode permet de joindre les éléments d'une liste en une chaîne ?",
+      "choices": [
+        "','.join(ma_liste)",
+        "ma_liste.join(',')",
+        "join(ma_liste, ',')",
+        "concat(ma_liste)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 37,
+      "question": "Comment arrondir le nombre 3.7 à l'entier le plus proche ?",
+      "choices": [
+        "round(3.7)",
+        "int(3.7)",
+        "floor(3.7)",
+        "ceil(3.7)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 38,
+      "question": "Que renvoie 5 % 2 ?",
+      "choices": [
+        "1",
+        "2",
+        "2.5",
+        "0"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 39,
+      "question": "Comment inverser l'ordre des éléments d'une liste ma_liste ?",
+      "choices": [
+        "ma_liste.reverse()",
+        "reverse(ma_liste)",
+        "ma_liste.invert()",
+        "ma_liste.sort(reverse=True)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 40,
+      "question": "Quelle est la différence entre remove() et pop() pour les listes ?",
+      "choices": [
+        "remove() supprime par valeur, pop() par index",
+        "remove() supprime par index, pop() par valeur",
+        "Aucune différence",
+        "pop() ne supprime rien"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 41,
+      "question": "Comment trier une liste ma_liste en ordre croissant ?",
+      "choices": [
+        "ma_liste.sort()",
+        "sort(ma_liste)",
+        "ma_liste.order()",
+        "sorted(ma_liste, ascending=True)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 42,
+      "question": "Que renvoie 'hello'[1:4] ?",
+      "choices": [
+        "'ell'",
+        "'hel'",
+        "'ello'",
+        "'llo'"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 43,
+      "question": "Comment vérifier si une chaîne commence par 'Bonjour' ?",
+      "choices": [
+        "texte.startswith('Bonjour')",
+        "texte.beginsWith('Bonjour')",
+        "texte[0:7] == 'Bonjour'",
+        "starts(texte, 'Bonjour')"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 44,
+      "question": "Quelle est la valeur de True and False en Python ?",
+      "choices": [
+        "False",
+        "True",
+        "None",
+        "0"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 45,
+      "question": "Comment compter le nombre d'occurrences de 'a' dans une chaîne texte ?",
+      "choices": [
+        "texte.count('a')",
+        "count(texte, 'a')",
+        "texte.occurrences('a')",
+        "len(texte, 'a')"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 46,
+      "question": "Que fait l'instruction pass en Python ?",
+      "choices": [
+        "Ne fait rien, c'est un placeholder",
+        "Passe à la ligne suivante",
+        "Quitte la fonction",
+        "Continue la boucle"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 47,
+      "question": "Comment créer un tuple avec un seul élément ?",
+      "choices": [
+        "(1,)",
+        "(1)",
+        "tuple(1)",
+        "[1]"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 48,
+      "question": "Quelle méthode permet de supprimer les espaces au début et à la fin d'une chaîne ?",
+      "choices": [
+        "strip()",
+        "trim()",
+        "clean()",
+        "remove_spaces()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 49,
+      "question": "Comment obtenir le maximum d'une liste de nombres ?",
+      "choices": [
+        "max(ma_liste)",
+        "ma_liste.max()",
+        "maximum(ma_liste)",
+        "ma_liste.maximum()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 50,
+      "question": "Que renvoie not True ?",
+      "choices": [
+        "False",
+        "True",
+        "None",
+        "0"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 51,
+      "question": "Comment ajouter une paire clé-valeur à un dictionnaire ?",
+      "choices": [
+        "mon_dict['cle'] = valeur",
+        "mon_dict.add('cle', valeur)",
+        "mon_dict.insert('cle', valeur)",
+        "mon_dict.put('cle', valeur)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 52,
+      "question": "Que renvoie str(123) ?",
+      "choices": [
+        "'123'",
+        "123",
+        "\"123\"",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 53,
+      "question": "Comment créer une liste de compréhension pour les carrés de 0 à 4 ?",
+      "choices": [
+        "[x**2 for x in range(5)]",
+        "[x*x in range(5)]",
+        "for x in range(5): x**2",
+        "list(x**2 for x in range(5))"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 54,
+      "question": "Quelle est la valeur de bool([]) ?",
+      "choices": [
+        "False",
+        "True",
+        "None",
+        "[]"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 55,
+      "question": "Comment extraire une sous-chaîne du caractère 2 au caractère 5 ?",
+      "choices": [
+        "texte[2:6]",
+        "texte[2:5]",
+        "texte.substring(2, 5)",
+        "texte(2:5)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 56,
+      "question": "Que fait la méthode extend() sur une liste ?",
+      "choices": [
+        "Ajoute tous les éléments d'un itérable",
+        "Ajoute un seul élément",
+        "Duplique la liste",
+        "Supprime des éléments"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 57,
+      "question": "Comment vérifier si deux variables pointent vers le même objet ?",
+      "choices": [
+        "x is y",
+        "x == y",
+        "x === y",
+        "id(x) == id(y)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 58,
+      "question": "Que renvoie list('abc') ?",
+      "choices": [
+        "['a', 'b', 'c']",
+        "'abc'",
+        "['abc']",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 59,
+      "question": "Comment obtenir toutes les clés d'un dictionnaire ?",
+      "choices": [
+        "mon_dict.keys()",
+        "mon_dict.getKeys()",
+        "keys(mon_dict)",
+        "mon_dict.allKeys()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 60,
+      "question": "Quelle est la valeur de 10 / 3 en Python 3 ?",
+      "choices": [
+        "3.3333333333333335",
+        "3",
+        "3.33",
+        "4"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 61,
+      "question": "Comment remplacer 'chat' par 'chien' dans une chaîne ?",
+      "choices": [
+        "texte.replace('chat', 'chien')",
+        "texte.substitute('chat', 'chien')",
+        "replace(texte, 'chat', 'chien')",
+        "texte.change('chat', 'chien')"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 62,
+      "question": "Que renvoie abs(-5) ?",
+      "choices": [
+        "5",
+        "-5",
+        "0",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 63,
+      "question": "Comment obtenir l'index d'un élément dans une liste ?",
+      "choices": [
+        "ma_liste.index(element)",
+        "ma_liste.find(element)",
+        "index(ma_liste, element)",
+        "ma_liste.position(element)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 64,
+      "question": "Que fait la fonction zip() ?",
+      "choices": [
+        "Combine plusieurs itérables en tuples",
+        "Compresse des fichiers",
+        "Trie des listes",
+        "Fusionne des chaînes"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 65,
+      "question": "Comment définir une fonction avec un paramètre par défaut ?",
+      "choices": [
+        "def func(x=10):",
+        "def func(x:10):",
+        "def func(x default 10):",
+        "def func(x || 10):"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 66,
+      "question": "Que renvoie 'Python'.lower() ?",
+      "choices": [
+        "'python'",
+        "'PYTHON'",
+        "'Python'",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 67,
+      "question": "Comment créer un set (ensemble) vide ?",
+      "choices": [
+        "set()",
+        "{}",
+        "[]",
+        "new Set()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 68,
+      "question": "Que fait l'opérateur * avec une liste ?",
+      "choices": [
+        "Répète la liste",
+        "Multiplie tous les éléments",
+        "Crée une matrice",
+        "Provoque une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 69,
+      "question": "Comment inverser une chaîne de caractères ?",
+      "choices": [
+        "texte[::-1]",
+        "texte.reverse()",
+        "reverse(texte)",
+        "texte.invert()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 70,
+      "question": "Que renvoie sum([1, 2, 3, 4]) ?",
+      "choices": [
+        "10",
+        "[1, 2, 3, 4]",
+        "4",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 71,
+      "question": "Comment vérifier si une chaîne contient seulement des chiffres ?",
+      "choices": [
+        "texte.isdigit()",
+        "texte.isnumeric()",
+        "is_number(texte)",
+        "texte.onlydigits()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 72,
+      "question": "Que fait la méthode clear() sur une liste ?",
+      "choices": [
+        "Supprime tous les éléments",
+        "Vide la mémoire",
+        "Réinitialise les indices",
+        "Trie la liste"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 73,
+      "question": "Comment obtenir toutes les valeurs d'un dictionnaire ?",
+      "choices": [
+        "mon_dict.values()",
+        "mon_dict.getValues()",
+        "values(mon_dict)",
+        "mon_dict.allValues()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 74,
+      "question": "Que renvoie 3 * 'ab' ?",
+      "choices": [
+        "'ababab'",
+        "'3ab'",
+        "6",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 75,
+      "question": "Comment convertir une liste en tuple ?",
+      "choices": [
+        "tuple(ma_liste)",
+        "ma_liste.toTuple()",
+        "(ma_liste)",
+        "convert(ma_liste, tuple)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 76,
+      "question": "Que fait l'instruction elif en Python ?",
+      "choices": [
+        "Teste une condition alternative",
+        "Termine une fonction",
+        "Crée une boucle",
+        "Définit une variable"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 77,
+      "question": "Comment obtenir le minimum d'une liste ?",
+      "choices": [
+        "min(ma_liste)",
+        "ma_liste.min()",
+        "minimum(ma_liste)",
+        "ma_liste.minimum()"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 78,
+      "question": "Que renvoie 'hello'.find('l') ?",
+      "choices": [
+        "2",
+        "1",
+        "3",
+        "-1"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 79,
+      "question": "Comment créer une copie d'une liste ?",
+      "choices": [
+        "ma_liste.copy() ou ma_liste[:]",
+        "copy(ma_liste)",
+        "ma_liste.clone()",
+        "duplicate(ma_liste)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 80,
+      "question": "Que fait l'opérateur += avec une variable ?",
+      "choices": [
+        "Ajoute et assigne",
+        "Compare et ajoute",
+        "Incrémente de 1",
+        "Concatène seulement"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 81,
+      "question": "Comment importer une fonction spécifique d'un module ?",
+      "choices": [
+        "from module import fonction",
+        "import fonction from module",
+        "import module.fonction",
+        "using module import fonction"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 82,
+      "question": "Que renvoie float('3.14') ?",
+      "choices": [
+        "3.14",
+        "'3.14'",
+        "3",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 83,
+      "question": "Comment vérifier si une chaîne se termine par '.txt' ?",
+      "choices": [
+        "texte.endswith('.txt')",
+        "texte.ends('.txt')",
+        "ends(texte, '.txt')",
+        "texte[-4:] == '.txt'"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 84,
+      "question": "Que fait la fonction all() ?",
+      "choices": [
+        "Vérifie si tous les éléments sont vrais",
+        "Retourne tous les éléments",
+        "Compte tous les éléments",
+        "Trie tous les éléments"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 85,
+      "question": "Comment formater une chaîne avec des variables ?",
+      "choices": [
+        "f'Bonjour {nom}'",
+        "'Bonjour ' + nom",
+        "Les deux réponses sont correctes",
+        "'Bonjour %s' % nom"
+      ],
+      "answer_index": 2
+    },
+    {
+      "id": 86,
+      "question": "Que renvoie sorted([3, 1, 2]) ?",
+      "choices": [
+        "[1, 2, 3]",
+        "[3, 2, 1]",
+        "[3, 1, 2]",
+        "None"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 87,
+      "question": "Comment supprimer une clé d'un dictionnaire ?",
+      "choices": [
+        "del mon_dict['cle']",
+        "mon_dict.remove('cle')",
+        "mon_dict.delete('cle')",
+        "remove(mon_dict, 'cle')"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 88,
+      "question": "Que fait la fonction any() ?",
+      "choices": [
+        "Vérifie si au moins un élément est vrai",
+        "Retourne n'importe quel élément",
+        "Compte les éléments vrais",
+        "Sélectionne un élément aléatoire"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 89,
+      "question": "Comment créer un dictionnaire à partir de deux listes ?",
+      "choices": [
+        "dict(zip(cles, valeurs))",
+        "dict(cles, valeurs)",
+        "zip(cles, valeurs)",
+        "combine(cles, valeurs)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 90,
+      "question": "Que renvoie 'abc'.isalpha() ?",
+      "choices": [
+        "True",
+        "False",
+        "'abc'",
+        "None"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 91,
+      "question": "Comment obtenir une valeur d'un dictionnaire avec une valeur par défaut ?",
+      "choices": [
+        "mon_dict.get('cle', default)",
+        "mon_dict['cle'] or default",
+        "mon_dict.getValue('cle', default)",
+        "mon_dict.fetch('cle', default)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 92,
+      "question": "Que renvoie 2 < 3 < 4 ?",
+      "choices": [
+        "True",
+        "False",
+        "Une erreur",
+        "None"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 93,
+      "question": "Comment insérer un élément à une position spécifique dans une liste ?",
+      "choices": [
+        "ma_liste.insert(index, element)",
+        "ma_liste.add(index, element)",
+        "ma_liste[index] = element",
+        "insert(ma_liste, index, element)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 94,
+      "question": "Que fait la fonction map() ?",
+      "choices": [
+        "Applique une fonction à chaque élément",
+        "Crée une carte/dictionnaire",
+        "Trouve un élément",
+        "Trie une liste"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 95,
+      "question": "Comment vérifier si une variable est de type int ?",
+      "choices": [
+        "isinstance(x, int)",
+        "type(x) == int",
+        "Les deux réponses sont correctes",
+        "x.isInt()"
+      ],
+      "answer_index": 2
+    },
+    {
+      "id": 96,
+      "question": "Que renvoie [1, 2] + [3, 4] ?",
+      "choices": [
+        "[1, 2, 3, 4]",
+        "[4, 6]",
+        "[[1, 2], [3, 4]]",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 97,
+      "question": "Comment créer une fonction lambda qui multiplie par 2 ?",
+      "choices": [
+        "lambda x: x * 2",
+        "def lambda(x): x * 2",
+        "lambda(x) = x * 2",
+        "x => x * 2"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 98,
+      "question": "Que fait la méthode update() sur un dictionnaire ?",
+      "choices": [
+        "Ajoute/met à jour des paires clé-valeur",
+        "Met à jour une seule valeur",
+        "Actualise le dictionnaire",
+        "Vérifie les mises à jour"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 99,
+      "question": "Comment obtenir les paires clé-valeur d'un dictionnaire ?",
+      "choices": [
+        "mon_dict.items()",
+        "mon_dict.pairs()",
+        "mon_dict.entries()",
+        "items(mon_dict)"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 100,
+      "question": "Que renvoie chr(65) ?",
+      "choices": [
+        "'A'",
+        "65",
+        "'65'",
+        "Une erreur"
+      ],
+      "answer_index": 0
+    }
+  ]
+}

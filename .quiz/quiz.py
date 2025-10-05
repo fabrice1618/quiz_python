@@ -77,18 +77,25 @@ def run_questionnaire(quiz: Dict) -> None:
         return
 
     questions_selectionnees = random.sample(questions_a_poser, len(questions_a_poser))
+    total_questions = len(questions_selectionnees)
 
-    print(f"\n{'='*60}")
-    print(f"  {quiz['quiz_title']}")
-    print(f"{'='*60}\n")
-
-    for question_pose in questions_selectionnees:
-        print(f'{question_pose["question_id"]}) {question_pose["question"]}\n')
+    for index, question_pose in enumerate(questions_selectionnees, 1):
+        print(f'{index} / {total_questions} - {question_pose["question"]}\n')
 
         choix_propose = random.sample(question_pose["liste_choix"], len(question_pose["liste_choix"]))
 
         for numero, choix in enumerate(choix_propose):
-            print(f'\t{numero + 1} - {choix["choix"]}')
+            # Gérer le formatage multiligne pour le code
+            choix_text = choix["choix"]
+            lines = choix_text.split('\n')
+            if len(lines) > 1:
+                # Afficher la première ligne avec le numéro
+                print(f'\t{numero + 1} : {lines[0]}')
+                # Afficher les lignes suivantes avec indentation
+                for line in lines[1:]:
+                    print(f'\t    {line}')
+            else:
+                print(f'\t{numero + 1} : {choix_text}')
 
         reponse = get_valid_input("\nRenseignez votre choix (Entrée pour passer) : ", 1, len(choix_propose))
 
@@ -131,8 +138,8 @@ def main():
     )
     parser.add_argument(
         '-q', '--quiz',
-        default='quiz_python',
-        help='Nom du fichier de quiz sans extension (défaut: quiz_python)'
+        default='quiz',
+        help='Nom du fichier de quiz sans extension (défaut: quiz)'
     )
     parser.add_argument(
         '-o', '--output',
@@ -148,8 +155,9 @@ def main():
     args = parser.parse_args()
 
     # Construire les chemins complets avec les dossiers et extensions
-    quiz_path = os.path.join('quiz_data', 'quiz', f'{args.quiz}.json')
-    output_path = os.path.join('quiz_data', 'resultats', f'{args.output}.json')
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    quiz_path = os.path.join(script_dir, 'quiz', f'{args.quiz}.json')
+    output_path = os.path.join(script_dir, 'resultats', f'{args.output}.json')
 
     try:
         if args.resume:
@@ -159,11 +167,21 @@ def main():
                 return 1
 
             quiz = load_quiz(output_path)
+
+            # Calculer le score actuel
+            correct_count = sum(1 for q in quiz['questions'] if q['correct'])
+            total_count = len(quiz['questions'])
+
             print("\n" + "="*60)
             print("  Reprise du Quiz")
             print("="*60 + "\n")
             print(f"Quiz: {quiz['quiz_title']}")
-            print(f"Utilisateur: {quiz['prenom']} {quiz['nom']}\n")
+            print(f"Utilisateur: {quiz['prenom']} {quiz['nom']}")
+            print(f"\nScore actuel : {correct_count} / {total_count}")
+            input("\nAppuyez sur Entrée pour reprendre...")
+
+            # Effacer l'écran avant d'afficher la première question
+            os.system('clear' if os.name != 'nt' else 'cls')
         else:
             # Mode normal: charger le quiz depuis le fichier source
             data = load_quiz(quiz_path)
@@ -173,10 +191,15 @@ def main():
 
             # Demander nom et prénom
             print("\n" + "="*60)
-            print("  Bienvenue au Quiz Python!")
+            print(f"  Bienvenue au {quiz['quiz_title']}")
             print("="*60 + "\n")
             quiz['nom'] = input("Entrez votre nom : ").strip()
             quiz['prenom'] = input("Entrez votre prénom : ").strip()
+
+            input("\nAppuyez sur Entrée pour commencer...")
+
+            # Effacer l'écran avant d'afficher la première question
+            os.system('clear' if os.name != 'nt' else 'cls')
 
         # Lancer le questionnaire
         run_questionnaire(quiz)
@@ -192,6 +215,7 @@ def main():
         return 1
     except KeyboardInterrupt:
         print("\n\n⚠️  Quiz interrompu par l'utilisateur.")
+        save_results(quiz, output_path)
         return 130
     except Exception as e:
         print(f"❌ Erreur inattendue: {e}")

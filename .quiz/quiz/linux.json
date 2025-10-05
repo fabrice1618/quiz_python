@@ -1,0 +1,556 @@
+{
+  "quiz_title": "Quiz - Introduction à Linux",
+  "language": "fr",
+  "questions": [
+    {
+      "id": 1,
+      "question": "Quelle commande permet d'afficher le répertoire de travail actuel ?",
+      "choices": [
+        "pwd",
+        "cd",
+        "ls",
+        "dir"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 2,
+      "question": "Quelle commande permet de lister les fichiers et répertoires du dossier courant ?",
+      "choices": [
+        "ls",
+        "dir",
+        "list",
+        "show"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 3,
+      "question": "Comment se déplacer vers le répertoire parent ?",
+      "choices": [
+        "cd ..",
+        "cd -",
+        "cd ~",
+        "cd /"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 4,
+      "question": "Quelle commande permet de créer un nouveau répertoire nommé 'projet' ?",
+      "choices": [
+        "mkdir projet",
+        "create projet",
+        "mkd projet",
+        "newdir projet"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 5,
+      "question": "Que signifie le symbole '~' dans un chemin Linux ?",
+      "choices": [
+        "Le répertoire personnel de l'utilisateur",
+        "Le répertoire racine",
+        "Le répertoire parent",
+        "Le répertoire système"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 6,
+      "question": "Quelle commande permet de supprimer un fichier nommé 'test.txt' ?",
+      "choices": [
+        "rm test.txt",
+        "del test.txt",
+        "delete test.txt",
+        "remove test.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 7,
+      "question": "Quelle option de la commande 'ls' permet d'afficher les fichiers cachés ?",
+      "choices": [
+        "ls -a",
+        "ls -h",
+        "ls -all",
+        "ls -hidden"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 8,
+      "question": "Comment copier un fichier 'fichier1.txt' vers 'fichier2.txt' ?",
+      "choices": [
+        "cp fichier1.txt fichier2.txt",
+        "copy fichier1.txt fichier2.txt",
+        "mv fichier1.txt fichier2.txt",
+        "duplicate fichier1.txt fichier2.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 9,
+      "question": "Quelle commande permet de déplacer ou renommer un fichier ?",
+      "choices": [
+        "mv",
+        "move",
+        "rename",
+        "rn"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 10,
+      "question": "Comment afficher le contenu d'un fichier texte avec la commande 'cat' ?",
+      "choices": [
+        "cat fichier.txt",
+        "cat -f fichier.txt",
+        "show fichier.txt",
+        "display fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 11,
+      "question": "Quelle commande permet de créer un fichier vide nommé 'nouveau.txt' ?",
+      "choices": [
+        "touch nouveau.txt",
+        "create nouveau.txt",
+        "new nouveau.txt",
+        "mkfile nouveau.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 12,
+      "question": "Quelle commande permet de supprimer un répertoire vide ?",
+      "choices": [
+        "rmdir nom_repertoire",
+        "rm nom_repertoire",
+        "del nom_repertoire",
+        "remove nom_repertoire"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 13,
+      "question": "Comment supprimer un répertoire et tout son contenu de manière récursive ?",
+      "choices": [
+        "rm -r nom_repertoire",
+        "rmdir -r nom_repertoire",
+        "delete nom_repertoire",
+        "rm nom_repertoire"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 14,
+      "question": "Quelle commande affiche les premières lignes d'un fichier ?",
+      "choices": [
+        "head fichier.txt",
+        "top fichier.txt",
+        "first fichier.txt",
+        "begin fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 15,
+      "question": "Quelle commande affiche les dernières lignes d'un fichier ?",
+      "choices": [
+        "tail fichier.txt",
+        "bottom fichier.txt",
+        "last fichier.txt",
+        "end fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 16,
+      "question": "Que représente le chemin absolu '/' ?",
+      "choices": [
+        "Le répertoire racine du système",
+        "Le répertoire personnel",
+        "Le répertoire courant",
+        "Le répertoire des programmes"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 17,
+      "question": "Quelle option de 'ls' affiche les détails (permissions, taille, date) ?",
+      "choices": [
+        "ls -l",
+        "ls -d",
+        "ls -v",
+        "ls -info"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 18,
+      "question": "Comment afficher le manuel d'une commande, par exemple 'ls' ?",
+      "choices": [
+        "man ls",
+        "help ls",
+        "info ls",
+        "doc ls"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 19,
+      "question": "Quelle commande permet de rechercher un texte dans un fichier ?",
+      "choices": [
+        "grep",
+        "find",
+        "search",
+        "locate"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 20,
+      "question": "Que fait la commande 'clear' ?",
+      "choices": [
+        "Efface l'écran du terminal",
+        "Supprime tous les fichiers",
+        "Vide un fichier",
+        "Ferme le terminal"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 21,
+      "question": "Comment afficher le contenu d'un fichier page par page ?",
+      "choices": [
+        "less fichier.txt",
+        "more fichier.txt",
+        "page fichier.txt",
+        "view fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 22,
+      "question": "Quelle commande permet de compter le nombre de lignes dans un fichier ?",
+      "choices": [
+        "wc -l fichier.txt",
+        "count fichier.txt",
+        "lines fichier.txt",
+        "nl fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 23,
+      "question": "Comment rediriger la sortie d'une commande vers un fichier ?",
+      "choices": [
+        "commande > fichier.txt",
+        "commande >> fichier.txt",
+        "commande < fichier.txt",
+        "commande | fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 24,
+      "question": "Quelle commande permet d'ajouter du contenu à la fin d'un fichier existant ?",
+      "choices": [
+        "commande >> fichier.txt",
+        "commande > fichier.txt",
+        "commande < fichier.txt",
+        "commande append fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 25,
+      "question": "Comment afficher l'historique des commandes tapées ?",
+      "choices": [
+        "history",
+        "hist",
+        "log",
+        "commands"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 26,
+      "question": "Quelle commande permet de changer les permissions d'un fichier ?",
+      "choices": [
+        "chmod",
+        "chown",
+        "chgrp",
+        "permission"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 27,
+      "question": "Comment rendre un script exécutable ?",
+      "choices": [
+        "chmod +x script.sh",
+        "chmod 777 script.sh",
+        "exec script.sh",
+        "run script.sh"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 28,
+      "question": "Quelle commande permet de changer le propriétaire d'un fichier ?",
+      "choices": [
+        "chown",
+        "chmod",
+        "owner",
+        "chuser"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 29,
+      "question": "Comment afficher les processus en cours d'exécution ?",
+      "choices": [
+        "ps",
+        "proc",
+        "process",
+        "list"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 30,
+      "question": "Quelle commande permet de tuer un processus ?",
+      "choices": [
+        "kill",
+        "stop",
+        "end",
+        "terminate"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 31,
+      "question": "Comment afficher l'espace disque disponible ?",
+      "choices": [
+        "df -h",
+        "disk",
+        "space",
+        "free"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 32,
+      "question": "Quelle commande affiche la taille d'un répertoire ?",
+      "choices": [
+        "du -sh repertoire",
+        "size repertoire",
+        "ls -size repertoire",
+        "disk repertoire"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 33,
+      "question": "Comment afficher les informations système (CPU, mémoire) ?",
+      "choices": [
+        "top",
+        "info",
+        "system",
+        "stat"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 34,
+      "question": "Quelle commande permet de compresser un fichier avec gzip ?",
+      "choices": [
+        "gzip fichier.txt",
+        "compress fichier.txt",
+        "zip fichier.txt",
+        "tar fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 35,
+      "question": "Comment décompresser un fichier .gz ?",
+      "choices": [
+        "gunzip fichier.gz",
+        "unzip fichier.gz",
+        "decompress fichier.gz",
+        "extract fichier.gz"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 36,
+      "question": "Quelle commande crée une archive tar ?",
+      "choices": [
+        "tar -cvf archive.tar fichiers/",
+        "tar -xvf archive.tar",
+        "zip archive.tar fichiers/",
+        "compress archive.tar fichiers/"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 37,
+      "question": "Comment extraire une archive tar ?",
+      "choices": [
+        "tar -xvf archive.tar",
+        "tar -cvf archive.tar",
+        "untar archive.tar",
+        "extract archive.tar"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 38,
+      "question": "Quelle commande permet de rechercher des fichiers par nom ?",
+      "choices": [
+        "find / -name \"fichier.txt\"",
+        "search fichier.txt",
+        "locate fichier.txt",
+        "grep fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 39,
+      "question": "Comment afficher les utilisateurs connectés au système ?",
+      "choices": [
+        "who",
+        "users",
+        "logged",
+        "connected"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 40,
+      "question": "Quelle commande permet de changer de mot de passe ?",
+      "choices": [
+        "passwd",
+        "password",
+        "chpwd",
+        "newpass"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 41,
+      "question": "Comment afficher la date et l'heure système ?",
+      "choices": [
+        "date",
+        "time",
+        "clock",
+        "datetime"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 42,
+      "question": "Quelle commande permet de télécharger un fichier depuis internet ?",
+      "choices": [
+        "wget URL",
+        "download URL",
+        "get URL",
+        "fetch URL"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 43,
+      "question": "Comment afficher les 10 dernières lignes d'un fichier en temps réel ?",
+      "choices": [
+        "tail -f fichier.txt",
+        "head -f fichier.txt",
+        "watch fichier.txt",
+        "monitor fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 44,
+      "question": "Quelle commande permet de comparer deux fichiers ?",
+      "choices": [
+        "diff fichier1.txt fichier2.txt",
+        "compare fichier1.txt fichier2.txt",
+        "cmp fichier1.txt fichier2.txt",
+        "check fichier1.txt fichier2.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 45,
+      "question": "Comment créer un lien symbolique ?",
+      "choices": [
+        "ln -s cible lien",
+        "link cible lien",
+        "symlink cible lien",
+        "mklink cible lien"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 46,
+      "question": "Quelle commande permet d'afficher le type d'un fichier ?",
+      "choices": [
+        "file nom_fichier",
+        "type nom_fichier",
+        "kind nom_fichier",
+        "info nom_fichier"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 47,
+      "question": "Comment trier le contenu d'un fichier ?",
+      "choices": [
+        "sort fichier.txt",
+        "order fichier.txt",
+        "arrange fichier.txt",
+        "organize fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 48,
+      "question": "Quelle commande permet d'éliminer les lignes en double ?",
+      "choices": [
+        "uniq fichier.txt",
+        "unique fichier.txt",
+        "distinct fichier.txt",
+        "remove-duplicates fichier.txt"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 49,
+      "question": "Comment afficher les variables d'environnement ?",
+      "choices": [
+        "env",
+        "vars",
+        "environment",
+        "show-env"
+      ],
+      "answer_index": 0
+    },
+    {
+      "id": 50,
+      "question": "Quelle commande permet d'éteindre le système immédiatement ?",
+      "choices": [
+        "shutdown now",
+        "poweroff",
+        "halt",
+        "reboot"
+      ],
+      "answer_index": 0
+    }
+  ]
+}
