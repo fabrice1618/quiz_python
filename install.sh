@@ -212,7 +212,7 @@ EOF
 # Téléchargement des quiz
 if [[ "$INSTALL_ALL" == true ]]; then
     print_info "Téléchargement de tous les quiz..."
-    QUIZ_LIST=("bases_python" "linux" "quiz" "python50")
+    QUIZ_LIST=("bases_python" "linux" "quiz" "python50" "php50")
     for quiz in "${QUIZ_LIST[@]}"; do
         download_file "$GITHUB_RAW_URL/.quiz/quiz/${quiz}.json" "$INSTALL_DIR/.quiz/quiz/${quiz}.json" "${quiz}.json"
     done
