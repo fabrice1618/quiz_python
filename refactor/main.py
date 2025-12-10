@@ -46,21 +46,26 @@ def run_questionnaire(quiz: Dict, resultats: Dict) -> Dict:
     questions_selectionnees = resultats_data.questions_a_poser(resultats)
     total_questions = len(questions_selectionnees)
 
-    for index, question_id in enumerate(questions_selectionnees, 1):
-        question_pose = quiz_data.read_question(question_id, quiz)
+    try:
+        for index, question_id in enumerate(questions_selectionnees, 1):
+            question_pose = quiz_data.read_question(question_id, quiz)
 
-        # Mélanger les options
-        choix_propose = random.sample(
-            question_pose["liste_choix"], len(question_pose["liste_choix"])
-        )
+            # Mélanger les options
+            choix_propose = random.sample(
+                question_pose["liste_choix"], len(question_pose["liste_choix"])
+            )
 
-        reponse = ui.form_question(
-            question_pose["question"], choix_propose, index, total_questions
-        )
+            reponse = ui.form_question(
+                question_pose["question"], choix_propose, index, total_questions
+            )
 
-        # Si l'utilisateur a appuyé sur Entrée sans réponse, passer à la question suivante
-        if is_answer_correct(choix_propose, reponse):
-            resultats = resultats_data.valider_resultat(question_id, resultats)
+            # Si l'utilisateur a appuyé sur Entrée sans réponse, passer à la question suivante
+            if is_answer_correct(choix_propose, reponse):
+                resultats = resultats_data.valider_resultat(question_id, resultats)
+    except KeyboardInterrupt:
+        # En cas de Ctrl+C, on ne propage pas l'exception pour permettre
+        # le retour des résultats mis à jour qui seront sauvegardés
+        pass
 
     return resultats
 
