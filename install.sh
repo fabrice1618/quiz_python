@@ -123,6 +123,16 @@ print_info "Création de la structure dans: $INSTALL_DIR"
 mkdir -p "$INSTALL_DIR/.quiz/quiz"
 mkdir -p "$INSTALL_DIR/.quiz/resultats"
 
+# Création de l'environnement virtuel
+print_info "Création de l'environnement virtuel Python..."
+if python3 -m venv "$INSTALL_DIR/.venv" 2>/dev/null; then
+    print_success "Environnement virtuel créé"
+else
+    print_error "Impossible de créer l'environnement virtuel"
+    print_warning "Vérifiez que python3-venv est installé: sudo apt install python3-venv"
+    exit 1
+fi
+
 # Fonction de téléchargement
 download_file() {
     local url="$1"
@@ -140,11 +150,52 @@ download_file() {
 }
 
 # Téléchargement du script principal
-download_file "$GITHUB_RAW_URL/quiz" "$INSTALL_DIR/quiz" "script principal"
-chmod +x "$INSTALL_DIR/quiz"
+download_file "$GITHUB_RAW_URL/refactor/main.py" "$INSTALL_DIR/.quiz/main.py" "main.py"
+chmod +x "$INSTALL_DIR/.quiz/main.py"
 
-# Téléchargement du script Python
-download_file "$GITHUB_RAW_URL/.quiz/quiz.py" "$INSTALL_DIR/.quiz/quiz.py" "quiz.py"
+# Téléchargement des modules Python
+download_file "$GITHUB_RAW_URL/refactor/quiz_data.py" "$INSTALL_DIR/.quiz/quiz_data.py" "quiz_data.py"
+download_file "$GITHUB_RAW_URL/refactor/resultats_data.py" "$INSTALL_DIR/.quiz/resultats_data.py" "resultats_data.py"
+download_file "$GITHUB_RAW_URL/refactor/config.py" "$INSTALL_DIR/.quiz/config.py" "config.py"
+download_file "$GITHUB_RAW_URL/refactor/ui.py" "$INSTALL_DIR/.quiz/ui.py" "ui.py"
+download_file "$GITHUB_RAW_URL/refactor/crypto.py" "$INSTALL_DIR/.quiz/crypto.py" "crypto.py"
+
+# Téléchargement du fichier .env.example et création du .env
+download_file "$GITHUB_RAW_URL/refactor/.env.example" "$INSTALL_DIR/.quiz/.env.example" ".env.example"
+if [ ! -f "$INSTALL_DIR/.quiz/.env" ]; then
+    cat > "$INSTALL_DIR/.quiz/.env" << ENVEOF
+DATA_PATH=$INSTALL_DIR/.quiz
+ENVEOF
+    print_success "Fichier .env créé"
+fi
+
+# Création du fichier requirements.txt avec dépendances runtime uniquement
+cat > "$INSTALL_DIR/requirements.txt" << 'REQEOF'
+python-dotenv
+REQEOF
+
+# Installation des dépendances dans le venv
+print_info "Installation des dépendances Python..."
+if "$INSTALL_DIR/.venv/bin/pip" install --upgrade pip > /dev/null 2>&1 && \
+   "$INSTALL_DIR/.venv/bin/pip" install -r "$INSTALL_DIR/requirements.txt" > /dev/null 2>&1; then
+    print_success "Dépendances installées"
+else
+    print_error "Erreur lors de l'installation des dépendances"
+    exit 1
+fi
+
+# Création du script wrapper
+cat > "$INSTALL_DIR/quiz" << 'WRAPPEREOF'
+#!/bin/bash
+# Script de lancement du quiz Python
+
+# Obtenir le répertoire du script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Lancer le script Python avec le venv
+"$SCRIPT_DIR/.venv/bin/python3" "$SCRIPT_DIR/.quiz/main.py" "$@"
+WRAPPEREOF
+chmod +x "$INSTALL_DIR/quiz"
 
 # Créer un README dans le dossier resultats
 cat > "$INSTALL_DIR/.quiz/resultats/readme.md" << 'EOF'

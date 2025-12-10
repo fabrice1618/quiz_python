@@ -6,6 +6,7 @@ import json
 from typing import Dict, List
 import random
 import config
+import crypto
 
 
 class QuizResultatError(Exception):
@@ -18,8 +19,9 @@ def load(resultat_file: str) -> Dict:
     resultat_path = config.data_path / config.RESULT_PATH / (resultat_file + ".json")
 
     try:
-        with open(resultat_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+        with open(resultat_path, "rb") as f:
+            file_bytes = f.read()
+            return crypto.load_json(file_bytes)
     except FileNotFoundError as exc:
         raise QuizResultatError(
             f"Erreur: {resultat_path} Le fichier n'existe pas."
@@ -35,8 +37,9 @@ def save(resultats: Dict, resultat_file: str) -> None:
 
     resultat_path = config.data_path / config.RESULT_PATH / (resultat_file + ".json")
 
-    with open(resultat_path, "w", encoding="utf-8") as fichier:
-        json.dump(resultats, fichier, indent=2, ensure_ascii=False)
+    encrypted_bytes = crypto.save_json(resultats, encrypt=True)
+    with open(resultat_path, "wb") as fichier:
+        fichier.write(encrypted_bytes)
 
 
 def create(quiz_name: str, liste_questions: List[int], prenom: str, nom: str) -> Dict:

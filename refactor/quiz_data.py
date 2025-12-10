@@ -5,6 +5,7 @@ Modèle quiz
 import json
 from typing import Dict, List
 import config
+import crypto
 
 
 class QuizFileError(Exception):
@@ -28,8 +29,9 @@ def load(quiz_name: str) -> Dict:
     quiz_path = config.data_path / config.QUIZ_PATH / (quiz_name + ".json")
 
     try:
-        with open(quiz_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+        with open(quiz_path, "rb") as f:
+            file_bytes = f.read()
+            data = crypto.load_json(file_bytes)
             if not "quiz_title" in data or not isinstance(data["quiz_title"], str):
                 raise QuizFileError(f"Erreur: {quiz_path} format incorrect.")
 
